@@ -11,10 +11,10 @@ var UsersList = React.createClass({
 	render: function render() {
 		return React.createElement(
 			'div',
-			{ className: 'users' },
+			{ className: 'text-center' },
 			React.createElement(
 				'h3',
-				null,
+            { className: 'mg-md text-center  mt40 tc-black fadeInUp animDelay06 animated' },
 				' Online Users '
 			),
 			React.createElement(
@@ -60,10 +60,15 @@ var MessageList = React.createClass({
 	render: function render() {
 		return React.createElement(
 			'div',
-			{ className: 'messages' },
+			{ className: 'tc-battleship-grey' },
+			React.createElement(
+			'br',
+			{ className: 'btn btn-wire btn-rd button-hire btn-xl wire-btn-cerulean-blue contactme' },
+
+			),
 			React.createElement(
 				'h2',
-				null,
+			{ className: 'btn btn-wire btn-rd button-hire btn-xl wire-btn-cerulean-blue contactme' },
 				' Conversation: '
 			),
 			this.props.messages.map(function (message, i) {
@@ -101,10 +106,10 @@ var MessageForm = React.createClass({
 	render: function render() {
 		return React.createElement(
 			'div',
-			{ className: 'message_form' },
+			{ className: 'mg-md text-center fadeInUp animDelay04 tc-cerulean-blue animated' },
 			React.createElement(
 				'h3',
-				null,
+			{ className: 'mg-md text-center fadeInUp animDelay04 tc-cerulean-blue animated' },
 				'Write New Message'
 			),
 			React.createElement(
@@ -140,10 +145,10 @@ var ChangeNameForm = React.createClass({
 	render: function render() {
 		return React.createElement(
 			'div',
-			{ className: 'change_name_form' },
+			{ className: 'mg-md text-center fadeInUp animDelay04 tc-cerulean-blue animated' },
 			React.createElement(
 				'h3',
-				null,
+			{ className: 'mg-md text-center fadeInUp animDelay04 tc-cerulean-blue animated' },
 				' Change Name '
 			),
 			React.createElement(
