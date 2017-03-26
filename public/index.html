@@ -1,25 +1,108 @@
-<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/hello.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/et-line.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/blocs.min.js"></script>
+
 	<title>Seri Chat</title>
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
+<!-- Main container -->
+<div class="page-container">
+
+<!-- bloc-0 -->
+<div class="bloc bgc-white l-bloc" id="bloc-0">
+	<div class="container bloc-sm">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index-2.html"><img src="img/bootstrap.png" alt="logo" /></a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav navbar-nav">
+					<li>
+						<a class="ltc-cerulean-blue" id="pl-undefined" href="index.html">Home</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- bloc-0 END -->
 	<div id="app">
-	<div/>
-		<div/>
-
-<div/>
-
 	<script src="/socket.io/socket.io.js"></script>
     <script src="js/app.js"></script>
+<!-- Footer - section-contactme -->
+<div class="bloc bgc-white l-bloc" id="section-contactme">
+	<div class="container bloc-md">
+		<div class="row section-action animated vanishIn animDelay02">
+			<div class="col-sm-10">
+				<h3 class="mg-md blocs-mobile-signup-text hidden-xs  tc-black">
+					Let&rsquo;s do something together
+				</h3>
+				<h4 class="mg-md blocs-mobile-signup-text hidden-sm hidden-lg hidden-md  tc-black">
+					Let&rsquo;s do something together
+				</h4>
+			</div>
+			<div class="col-sm-2">
+				<div class="text-center">
+					<a href="mailto:dev.ahmed.saeed@mail.com" class="btn btn-wire btn-rd button-hire btn-xl wire-btn-cerulean-blue contactme" id="contactme">Contact me!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - section-contactme END -->
+
+<!-- Footer - section-footer -->
+<div class="bloc bgc-cerulean-blue d-bloc" id="section-footer">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-sm-6">
+				<p>
+					©2017 - Ahmed Saeed Ahmed
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<a href="https://github.com/yahongie2014/" target="_blank">
+				<span class="fa fa-github icon-md pull-right mrl10"></span>
+				</a>
+				<a href="https://www.linkedin.com/in/devahmedsaeed/" target="_blank">
+				<span class="fa fa-linkedin icon-md pull-right mrl10"></span>
+				</a>
+				<a href="https://twitter.com/yahongie" target="_blank">
+				<span class="fa fa-twitter icon-md pull-right mr30"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - section-footer END -->
+
+</div>
+<!-- Main container END -->
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+        	var m = ['m', 'co', '.', 'ail', 'gm', '@', 'ckissi', ':', 'mailto'].reverse().join('');
+
+            /* Set the contact email url for each "contact us" links.*/
+            $('.contactme').prop("href", m);
+        }, 200);
+    });
+</script>
 </body>
 </html>
