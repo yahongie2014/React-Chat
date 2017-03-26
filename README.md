@@ -33,7 +33,7 @@ open Cmd in project file then write following command
 ---------------------------------
 > node app.js
 
-Express server listening on port 3000 in development mode 
+>Express server listening on port 3000 in development mode 
 ---------------------------------
 #After that open browser and type 
 
