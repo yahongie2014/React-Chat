@@ -319,23 +319,18 @@ function defaultClearTimeout () {
 } ())
 function runTimeout(fun) {
     if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
         return setTimeout(fun, 0);
     }
-    // if setTimeout wasn't available but was latter defined
     if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
         cachedSetTimeout = setTimeout;
         return setTimeout(fun, 0);
     }
     try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
         return cachedSetTimeout(fun, 0);
     } catch(e){
         try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
             return cachedSetTimeout.call(null, fun, 0);
         } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
             return cachedSetTimeout.call(this, fun, 0);
         }
     }
@@ -353,15 +348,11 @@ function runClearTimeout(marker) {
         return clearTimeout(marker);
     }
     try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
         return cachedClearTimeout(marker);
     } catch (e){
         try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
             return cachedClearTimeout.call(null, marker);
         } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
             return cachedClearTimeout.call(this, marker);
         }
     }
@@ -426,7 +417,6 @@ process.nextTick = function (fun) {
     }
 };
 
-// v8 likes predictible objects
 function Item(fun, array) {
     this.fun = fun;
     this.array = array;
@@ -438,7 +428,7 @@ process.title = 'browser';
 process.browser = true;
 process.env = {};
 process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
+process.version = '';
 process.versions = {};
 
 function noop() {}
@@ -524,20 +514,12 @@ var documentMode = null;
 if (ExecutionEnvironment.canUseDOM && 'documentMode' in document) {
   documentMode = document.documentMode;
 }
-
-// Webkit offers a very useful `textInput` event that can be used to
-// directly represent `beforeInput`. The IE `textinput` event is not as
-// useful, so we don't use it.
 var canUseTextInputEvent = (
   ExecutionEnvironment.canUseDOM &&
   'TextEvent' in window &&
   !documentMode &&
   !isPresto()
 );
-
-// In IE9+, we have access to composition events, but the data supplied
-// by the native compositionend event may be incorrect. Japanese ideographic
-// spaces, for instance (\u3000) are not recorded correctly.
 var useFallbackCompositionData = (
   ExecutionEnvironment.canUseDOM &&
   (
@@ -621,29 +603,14 @@ var eventTypes = {
   }
 };
 
-// Track whether we've ever handled a keypress on the space key.
 var hasSpaceKeypress = false;
 
-/**
- * Return whether a native keypress event is assumed to be a command.
- * This is required because Firefox fires `keypress` events for key commands
- * (cut, copy, select-all, etc.) even though no character is inserted.
- */
 function isKeypressCommand(nativeEvent) {
   return (
     (nativeEvent.ctrlKey || nativeEvent.altKey || nativeEvent.metaKey) &&
-    // ctrlKey && altKey is equivalent to AltGr, and is not a command.
     !(nativeEvent.ctrlKey && nativeEvent.altKey)
   );
 }
-
-
-/**
- * Translate native top level events into event types.
- *
- * @param {string} topLevelType
- * @return {object}
- */
 function getCompositionEventType(topLevelType) {
   switch (topLevelType) {
     case topLevelTypes.topCompositionStart:
@@ -670,26 +637,15 @@ function isFallbackCompositionStart(topLevelType, nativeEvent) {
   );
 }
 
-/**
- * Does our fallback mode think that this event is the end of composition?
- *
- * @param {string} topLevelType
- * @param {object} nativeEvent
- * @return {boolean}
- */
 function isFallbackCompositionEnd(topLevelType, nativeEvent) {
   switch (topLevelType) {
     case topLevelTypes.topKeyUp:
-      // Command keys insert or clear IME input.
       return (END_KEYCODES.indexOf(nativeEvent.keyCode) !== -1);
     case topLevelTypes.topKeyDown:
-      // Expect IME keyCode on each keydown. If we get any other
-      // code we must have exited earlier.
       return (nativeEvent.keyCode !== START_KEYCODE);
     case topLevelTypes.topKeyPress:
     case topLevelTypes.topMouseDown:
     case topLevelTypes.topBlur:
-      // Events are not possible without cancelling IME.
       return true;
     default:
       return false;
@@ -18225,8 +18181,6 @@ function getEventCharCode(nativeEvent) {
 
   if ('charCode' in nativeEvent) {
     charCode = nativeEvent.charCode;
-
-    // FF does not set `charCode` for the Enter-key, check against `keyCode`.
     if (charCode === 0 && keyCode === 13) {
       charCode = 13;
     }
@@ -20164,9 +20118,6 @@ if ("production" !== process.env.NODE_ENV) {
       var message = 'Warning: ' + format.replace(/%s/g, function()  {return args[argIndex++];});
       console.warn(message);
       try {
-        // --- Welcome to debugging React ---
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
         throw new Error(message);
       } catch(x) {}
     }
