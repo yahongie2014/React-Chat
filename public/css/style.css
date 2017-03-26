@@ -12,6 +12,7 @@ body{
 	margin: 1em;
 	border : 3px solid black;
 	padding: 1em;
+	box-sizing: border-box;
 }
 .message_form,
 .change_name_form{
