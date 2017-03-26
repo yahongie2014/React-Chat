@@ -8,25 +8,38 @@ Documentation for the framework can be found on the [Nodejs website](https://nod
 ## How To start
 #first:
 Install Node js From (https://nodejs.org/en/download/)
-After install 
+
+##After install 
+
 open Cmd in project file then write following command
--npm install
+
+##-npm install
+
 #moduel will install dependencies for nodejs
+
 #check package.json to start application
-after install all dependencies
-check nodejs version by that command
+
+#after install all dependencies
+
+#check nodejs version by that command
+
 -npm -v
-then type in cmd project file 
+
+#then type in cmd project file 
+
 -npm start
-will show u 
+
+#will show u 
 ---------------------------------
 > node app.js
 
 Express server listening on port 3000 in development mode 
 ---------------------------------
-After that open browser and type 
+#After that open browser and type 
+
 http://localhost:3000
- and have fun
+
+#Thank u
 
 ## License
 
