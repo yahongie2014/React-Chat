@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -15,10 +14,9 @@ var server = http.createServer(app);
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.set('port', 5000);
-
-if (process.env.NODE_ENV === 'development') {
-	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-}
+app.get('/', function(request, response) {
+  response.render('public/index');
+});
 
 /* Socket.io Communication */
 var io = require('socket.io').listen(server);
