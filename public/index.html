@@ -23,7 +23,7 @@
 	<div class="container bloc-sm">
 		<nav class="navbar row">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/bootstrap.png" alt="logo" /></a>
+				<a class="navbar-brand" href="index-2.html"><img src="img/bootstrap.png" alt="logo" /></a>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
@@ -33,15 +33,53 @@
 					<li>
 						<a class="ltc-cerulean-blue" id="pl-undefined" href="index.html">Home</a>
 					</li>
+					<li>
+						<a class="ltc-cerulean-blue" id="pl-undefined" href="https://drive.google.com/file/d/0BwQmppNn7OcjbFJBc1Q5N0hMSFk/edit">My CV</a>
+					</li>
+					<li>
+						<a class="ltc-cerulean-blue" href="http://dev-ahmed-saeed.byethost7.com/" id="pl-undefined">Projects</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 </div>
 <!-- bloc-0 END -->
-	<div id="app">
+
+<!-- section-header -->
+<div class="bloc tc-battleship-grey bgc-white" id="section-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h3 class="mg-md  animated fadeInLeft animDelay02 tc-battleship-grey mt100">
+					Hello, my name is
+				</h3>
+				<h2 class="mg-md  animated fadeInLeft animDelay04 tc-black">
+					<strong>Ahmed Saeed</strong>
+				</h2>
+				<p class=" mg-lg animated fadeInLeft animDelay04">
+					<span>I&rsquo;m a father and full stack developer located in Cairo, Egypt.&nbsp;</span>
+				</p>
+				<h3 class="mg-lg animated fadeInLeft animDelay06  tc-battleship-grey">
+					#laravel &nbsp;#wordpress &nbsp;#PHP &nbsp;#NodeJS
+				</h3><a class="btn btn-xl btn-clean btn-rd animated vanishIn animDelay08 btn-cerulean-blue hidden-xs" onclick="scrollToTarget('#section-projects')">See my work</a>
+				<div class="text-center">
+					<a class="btn btn-xl btn-clean btn-rd animated vanishIn animDelay08 btn-cerulean-blue hidden-sm hidden-lg hidden-md" onclick="scrollToTarget('#section-projects')">See my work</a>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<img src="img/6tag_070117-223235.jpg" class="animated vanishIn animDelay08" height="650" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-0 END -->
+	<div id="app" class="container bloc-lg">
 	<script src="/socket.io/socket.io.js"></script>
     <script src="js/app.js"></script>
+				</div>
+			</div>
+
 <!-- Footer - section-contactme -->
 <div class="bloc bgc-white l-bloc" id="section-contactme">
 	<div class="container bloc-md">
@@ -54,6 +92,7 @@
 					Let&rsquo;s do something together
 				</h4>
 			</div>
+
 			<div class="col-sm-2">
 				<div class="text-center">
 					<a href="mailto:dev.ahmed.saeed@mail.com" class="btn btn-wire btn-rd button-hire btn-xl wire-btn-cerulean-blue contactme" id="contactme">Contact me!</a>
