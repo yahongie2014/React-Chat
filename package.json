@@ -2,15 +2,29 @@
   "name": "Seri-Chat",
   "version": "0.6.9",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "build": "browserify ./client/app.jsx -t babelify --outfile ./public/js/app.js",
-    "start": "node app.js"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "5.9.1"
   },
   "dependencies": {
     "express": "^4.13.1",
     "react": "^0.13.3",
     "socket.io": "^1.3.5"
   },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+
   "devDependencies": {
     "babelify": "^6.1.3",
     "browserify": "^10.2.6"
