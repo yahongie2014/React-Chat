@@ -33,14 +33,14 @@ open Cmd in project file then write following command
 ---------------------------------
 > node app.js
 
->Express server listening on port 3000 in development mode 
+>Express server listening on port 5000 in development mode 
 ---------------------------------
 #After that open browser and type 
 
-http://localhost:3000
+http://localhost:5000
 
-#Thank u
+>Thank u
 
-## License
+>License
 
-The Reactjs framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+>The Reactjs framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
