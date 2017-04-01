@@ -1,19 +1,20 @@
-# Node js Project
-#
+##################
+#ReactChat-Nodejs#
+##################
 
-## Official Documentation
+#Official Documentation
 
-Documentation for the framework can be found on the [Nodejs website](https://nodejs.org/api/)
+-Documentation for the framework can be found on the [Nodejs website](https://nodejs.org/api/)
 
-## How To start
-#first:
-Install Node js From (https://nodejs.org/en/download/)
+# How To start
+>first:
+>Install Node js From (https://nodejs.org/en/download/)
 
-##After install 
+>After install 
 
 open Cmd in project file then write following command
 
-##-npm install
+>npm install
 
 #moduel will install dependencies for nodejs
 
@@ -23,11 +24,11 @@ open Cmd in project file then write following command
 
 #check nodejs version by that command
 
--npm -v
+>npm -v
 
 #then type in cmd project file 
 
--npm start
+>npm start
 
 #will show u 
 ---------------------------------
